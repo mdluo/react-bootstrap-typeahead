@@ -130,7 +130,7 @@ const Typeahead = React.createClass({
   },
 
   getInitialState() {
-    const {defaultSelected} = this.props;
+    const {defaultSelected, defaultValue} = this.props;
 
     let selected = this.props.selected.slice();
     if (!isEmpty(defaultSelected)) {
@@ -141,7 +141,7 @@ const Typeahead = React.createClass({
       activeIndex: -1,
       selected,
       showMenu: false,
-      text: '',
+      text: defaultValue,
     };
   },
 
